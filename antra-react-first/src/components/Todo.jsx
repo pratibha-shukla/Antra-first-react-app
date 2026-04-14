@@ -8,6 +8,10 @@ const ToDo = () => {
    
 
     const handleAddToDo = () => {
+
+         if(input.trim() === ""){
+            return;
+        }
        const newtodo = {
         id: todosData.length + 1,
         todo: input,
