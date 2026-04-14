@@ -1,6 +1,7 @@
 
 import todosData from "../model/Data.jsx";
 import { useState } from "react";
+import "./Todo.css";
 
 const ToDo = () => {
     const [input, setInput] = useState("");
