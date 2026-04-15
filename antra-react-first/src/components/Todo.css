@@ -1,33 +1,98 @@
-
-
+/* Center the whole app */
 body {
-    background-color: azure;
-}
-h1{
-    text-align: center;
-    color:blue;
-    margin-top: 20px;
+    background-color: #f0fbff; /* Soft azure */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
 }
 
-.todo-list {
-    list-style-type: none;
-    padding: 0;
-    max-width: 400px;
-    margin: 20px auto;
-    color: aqua;
+h1 {
+    text-align: center;
+    color: #0000ff;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
-input[type="text"] {
-    padding: 10px;
-    width: 30%;
-    border: 1px solid #ccc;
-    border-radius: 15px;
+
+/* Input Area */
+input {
+    padding: 12px 20px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
 }
+
 button {
-    padding: 10px 12px;
-    margin-left: 3px;
-    border: none;
-    border-radius: 15px;
-    background-color: rgb(166, 166, 233);
-    color: white;
     cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+/* Add ToDo Button */
+button:not([class]) { /* Styles the button with no class */
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background: white;
+    margin-left: 10px;
+}
+
+/* The List Container */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Each ToDo Item - This fixes the alignment */
+.todo-item {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding: 10px 0;
+    color: #556b72;
+    font-size: 1.2rem;
+    gap: 10px; /* Space between text and buttons */
+}
+
+/* This pushes all buttons to the far right */
+.todo-item::after {
+    content: "";
+    flex: 1;
+    order: -1; /* Pushes text to stay left while buttons move right */
+}
+
+/* Button Styles to match your image */
+.delete-btn {
+    background-color: #e57373;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+
+.load-btn {
+    background-color: #b0bec5;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+
+.edit-btn {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+
+/* Hover effects */
+button:hover {
+    filter: brightness(90%);
+    transform: scale(1.05);
 }
