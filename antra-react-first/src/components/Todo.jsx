@@ -45,7 +45,6 @@ const ToDo = () => {
 
    return (
     <div>
-        <h2>ToDo List</h2>
         <input type="text" 
         placeholder="type here to add or edit todo.." 
         value={input} 
