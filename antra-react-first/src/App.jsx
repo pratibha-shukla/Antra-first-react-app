@@ -1,8 +1,10 @@
 
-import ToDo from "./components/Todo.jsx";
+// import ToDo from "./components/Todo.jsx";
 import Timer from "./components/Timer.jsx";
 
+
 import './App.css'
+import ToDoReducerApp from "./components/ToDoReducerApp.jsx";
 
 const App = () => {
  
@@ -10,7 +12,8 @@ const App = () => {
   return (
     <div className="App">
         <Timer></Timer>
-      <ToDo></ToDo>
+        <ToDoReducerApp></ToDoReducerApp>
+      {/* <ToDo></ToDo> */}
     
     </div>
   )

@@ -65,7 +65,7 @@ const Timer = () => {
      </button>
     <button onClick= {() => setTimeLeft(0)}> RESET </button>
     </div>
-        <h2 style={{fontsize:"50px"}}>{formatTime()}</h2>
+        <h1 style={{fontsize:"50px"}}>{formatTime()}</h1>
     </div>
     </div>
     
